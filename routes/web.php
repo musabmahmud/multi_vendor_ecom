@@ -22,3 +22,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+// Admin Login Route 
+Route::get('admin/login', 'App\Http\Controllers\Admin\AdminController@login');
+// Admin Dashboard Route 
+Route::get('admin/dashboard', 'App\Http\Controllers\Admin\AdminController@dashboard');
