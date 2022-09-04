@@ -1,22 +1,23 @@
 @extends('admin.inc.layout')
 @section('dashboard')
-  active
+    active
 @endsection
 @section('content')
-<!-- partial -->
-<div class="main-panel">
+    <!-- partial -->
     <div class="content-wrapper">
         <div class="row">
             <div class="col-md-12 grid-margin">
                 <div class="row">
                     <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                        <h3 class="font-weight-bold">Welcome Aamir</h3>
-                        <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
+                        <h3 class="font-weight-bold">Welcome {{Auth::guard('admin')->user()->name}}</h3>
+                        <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span
+                                class="text-primary">3 unread alerts!</span></h6>
                     </div>
                     <div class="col-12 col-xl-4">
                         <div class="justify-content-end d-flex">
                             <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                                <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button"
+                                    id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <i class="mdi mdi-calendar"></i> Today (10 Jan 2021)
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
@@ -98,7 +99,8 @@
                 <div class="card">
                     <div class="card-body">
                         <p class="card-title">Order Details</p>
-                        <p class="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                        <p class="font-weight-500">The total number of sessions within the date range. It is the period time
+                            a user is actively engaged with your website, page or app, etc</p>
                         <div class="d-flex flex-wrap mb-5">
                             <div class="mr-5 mt-3">
                                 <p class="text-muted">Order value</p>
@@ -128,7 +130,8 @@
                             <p class="card-title">Sales Report</p>
                             <a href="#" class="text-info">View all</a>
                         </div>
-                        <p class="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                        <p class="font-weight-500">The total number of sessions within the date range. It is the period time
+                            a user is actively engaged with your website, page or app, etc</p>
                         <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
                         <canvas id="sales-chart"></canvas>
                     </div>
@@ -139,7 +142,8 @@
             <div class="col-md-12 grid-margin stretch-card">
                 <div class="card position-relative">
                     <div class="card-body">
-                        <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                        <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2"
+                            data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="row">
@@ -148,7 +152,9 @@
                                                 <p class="card-title">Detailed Reports</p>
                                                 <h1 class="text-primary">$34040</h1>
                                                 <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                                                <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                                                <p class="mb-2 mb-xl-0">The total number of sessions within the date range.
+                                                    It is the period time a user is actively engaged with your website, page
+                                                    or app, etc</p>
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-xl-9">
@@ -160,7 +166,10 @@
                                                                 <td class="text-muted">Illinois</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-primary"
+                                                                            role="progressbar" style="width: 70%"
+                                                                            aria-valuenow="70" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -171,7 +180,10 @@
                                                                 <td class="text-muted">Washington</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-warning"
+                                                                            role="progressbar" style="width: 30%"
+                                                                            aria-valuenow="30" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -182,7 +194,10 @@
                                                                 <td class="text-muted">Mississippi</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" style="width: 95%"
+                                                                            aria-valuenow="95" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -193,7 +208,10 @@
                                                                 <td class="text-muted">California</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-info"
+                                                                            role="progressbar" style="width: 60%"
+                                                                            aria-valuenow="60" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -204,7 +222,10 @@
                                                                 <td class="text-muted">Maryland</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-primary"
+                                                                            role="progressbar" style="width: 40%"
+                                                                            aria-valuenow="40" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -215,7 +236,10 @@
                                                                 <td class="text-muted">Alaska</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" style="width: 75%"
+                                                                            aria-valuenow="75" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -240,7 +264,9 @@
                                                 <p class="card-title">Detailed Reports</p>
                                                 <h1 class="text-primary">$34040</h1>
                                                 <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                                                <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                                                <p class="mb-2 mb-xl-0">The total number of sessions within the date range.
+                                                    It is the period time a user is actively engaged with your website, page
+                                                    or app, etc</p>
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-xl-9">
@@ -252,7 +278,10 @@
                                                                 <td class="text-muted">Illinois</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-primary"
+                                                                            role="progressbar" style="width: 70%"
+                                                                            aria-valuenow="70" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -263,7 +292,10 @@
                                                                 <td class="text-muted">Washington</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-warning"
+                                                                            role="progressbar" style="width: 30%"
+                                                                            aria-valuenow="30" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -274,7 +306,10 @@
                                                                 <td class="text-muted">Mississippi</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" style="width: 95%"
+                                                                            aria-valuenow="95" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -285,7 +320,10 @@
                                                                 <td class="text-muted">California</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-info"
+                                                                            role="progressbar" style="width: 60%"
+                                                                            aria-valuenow="60" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -296,7 +334,10 @@
                                                                 <td class="text-muted">Maryland</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-primary"
+                                                                            role="progressbar" style="width: 40%"
+                                                                            aria-valuenow="40" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -307,7 +348,10 @@
                                                                 <td class="text-muted">Alaska</td>
                                                                 <td class="w-100 px-0">
                                                                     <div class="progress progress-md mx-4">
-                                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" style="width: 75%"
+                                                                            aria-valuenow="75" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -472,7 +516,8 @@
                         </div>
                         <div class="add-items d-flex mb-0 mt-2">
                             <input type="text" class="form-control todo-list-input" placeholder="Add new task">
-                            <button class="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i class="icon-circle-plus"></i></button>
+                            <button class="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i
+                                    class="icon-circle-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -559,7 +604,8 @@
                                         <p class="mb-0">Data 1</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="progress progress-md flex-grow-1 mr-4">
-                                                <div class="progress-bar bg-inf0" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-inf0" role="progressbar" style="width: 95%"
+                                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <p class="mb-0">5k</p>
                                         </div>
@@ -568,7 +614,8 @@
                                         <p class="mb-0">Data 2</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="progress progress-md flex-grow-1 mr-4">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 35%"
+                                                    aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <p class="mb-0">1k</p>
                                         </div>
@@ -577,7 +624,8 @@
                                         <p class="mb-0">Data 3</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="progress progress-md flex-grow-1 mr-4">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 48%"
+                                                    aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <p class="mb-0">992</p>
                                         </div>
@@ -586,7 +634,8 @@
                                         <p class="mb-0">Data 4</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="progress progress-md flex-grow-1 mr-4">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 25%"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <p class="mb-0">687</p>
                                         </div>
@@ -602,7 +651,8 @@
                                 <div class="row">
                                     <div class="col-8 text-white">
                                         <h3>34040</h3>
-                                        <p class="text-white font-weight-500 mb-0">The total number of sessions within the date range.It is calculated as the sum . </p>
+                                        <p class="text-white font-weight-500 mb-0">The total number of sessions within the
+                                            date range.It is calculated as the sum . </p>
                                     </div>
                                     <div class="col-4 background-icon">
                                     </div>
@@ -703,14 +753,4 @@
         </div>
     </div>
     <!-- content-wrapper ends -->
-    <!-- partial:partials/_footer.html -->
-    <footer class="footer">
-        <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021. Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
-        </div>
-    </footer>
-    <!-- partial -->
-</div>
-<!-- main-panel ends -->
 @endsection

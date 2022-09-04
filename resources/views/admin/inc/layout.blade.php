@@ -7,19 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Skydash Admin</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('admin')}}/vendors/feather/feather.css">
-    <link rel="stylesheet" href="{{ asset('admin')}}/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="{{ asset('admin')}}/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="{{ asset('admin') }}/vendors/feather/feather.css">
+    <link rel="stylesheet" href="{{ asset('admin') }}/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="{{ asset('admin') }}/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="{{ asset('admin')}}/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-    <link rel="stylesheet" href="{{ asset('admin')}}/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('admin')}}/js/select.dataTables.min.css">
+    <link rel="stylesheet" href="{{ asset('admin') }}/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="{{ asset('admin') }}/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin') }}/js/select.dataTables.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="{{ asset('admin')}}/css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="{{ asset('admin') }}/css/vertical-layout-light/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="{{ asset('admin')}}/images/favicon.png" />
+    <link rel="shortcut icon" href="{{ asset('admin') }}/images/favicon.png" />
 </head>
 
 <body>
@@ -27,8 +27,10 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo mr-5" href="{{ asset('admin')}}/index.html"><img src="{{ asset('admin')}}/images/logo.svg" class="mr-2" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="{{ asset('admin')}}/index.html"><img src="{{ asset('admin')}}/images/logo-mini.svg" alt="logo" /></a>
+                <a class="navbar-brand brand-logo mr-5" href="{{ asset('admin') }}/index.html"><img
+                        src="{{ asset('admin') }}/images/logo.svg" class="mr-2" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="{{ asset('admin') }}/index.html"><img
+                        src="{{ asset('admin') }}/images/logo-mini.svg" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -42,17 +44,20 @@
                                     <i class="icon-search"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now"
+                                aria-label="search" aria-describedby="search">
                         </div>
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item dropdown">
-                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="{{ asset('admin')}}/#" data-toggle="dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown"
+                            href="{{ asset('admin') }}/#" data-toggle="dropdown">
                             <i class="icon-bell mx-0"></i>
                             <span class="count"></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                            aria-labelledby="notificationDropdown">
                             <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
                             <a class="dropdown-item preview-item">
                                 <div class="preview-thumbnail">
@@ -96,27 +101,30 @@
                         </div>
                     </li>
                     <li class="nav-item nav-profile dropdown">
-                        <a class="nav-link dropdown-toggle" href="{{ asset('admin')}}/#" data-toggle="dropdown" id="profileDropdown">
-                            <img src="{{ asset('admin')}}/images/faces/face28.jpg" alt="profile" />
+                        <a class="nav-link dropdown-toggle" href="{{ asset('admin') }}/#" data-toggle="dropdown"
+                            id="profileDropdown">
+                            <img src="{{ asset('admin') }}/images/faces/face28.jpg" alt="profile" />
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
                                 <i class="ti-settings text-primary"></i>
                                 Settings
                             </a>
-                            <a class="dropdown-item">
+                            <a class="dropdown-item" href={{ url('admin/logout') }}>
                                 <i class="ti-power-off text-primary"></i>
                                 Logout
                             </a>
                         </div>
                     </li>
                     <li class="nav-item nav-settings d-none d-lg-flex">
-                        <a class="nav-link" href="{{ asset('admin')}}/#">
+                        <a class="nav-link" href="{{ asset('admin') }}/#">
                             <i class="icon-ellipsis"></i>
                         </a>
                     </li>
                 </ul>
-                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
                     <span class="icon-menu"></span>
                 </button>
             </div>
@@ -150,19 +158,26 @@
                 <i class="settings-close ti-close"></i>
                 <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="todo-tab" data-toggle="tab" href="{{ asset('admin')}}/#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+                        <a class="nav-link active" id="todo-tab" data-toggle="tab"
+                            href="{{ asset('admin') }}/#todo-section" role="tab" aria-controls="todo-section"
+                            aria-expanded="true">TO DO LIST</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="chats-tab" data-toggle="tab" href="{{ asset('admin')}}/#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+                        <a class="nav-link" id="chats-tab" data-toggle="tab"
+                            href="{{ asset('admin') }}/#chats-section" role="tab"
+                            aria-controls="chats-section">CHATS</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="setting-content">
-                    <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+                    <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel"
+                        aria-labelledby="todo-section">
                         <div class="add-items d-flex px-3 mb-0">
                             <form class="form w-100">
                                 <div class="form-group d-flex">
-                                    <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
-                                    <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                                    <input type="text" class="form-control todo-list-input"
+                                        placeholder="Add To-do">
+                                    <button type="submit" class="add btn btn-primary todo-list-add-btn"
+                                        id="add-task">Add</button>
                                 </div>
                             </form>
                         </div>
@@ -237,11 +252,14 @@
                     <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
                         <div class="d-flex align-items-center justify-content-between border-bottom">
                             <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
-                            <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+                            <small
+                                class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See
+                                All</small>
                         </div>
                         <ul class="chat-list">
                             <li class="list active">
-                                <div class="profile"><img src="{{ asset('admin')}}/images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                                <div class="profile"><img src="{{ asset('admin') }}/images/faces/face1.jpg"
+                                        alt="image"><span class="online"></span></div>
                                 <div class="info">
                                     <p>Thomas Douglas</p>
                                     <p>Available</p>
@@ -249,7 +267,8 @@
                                 <small class="text-muted my-auto">19 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="{{ asset('admin')}}/images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                                <div class="profile"><img src="{{ asset('admin') }}/images/faces/face2.jpg"
+                                        alt="image"><span class="offline"></span></div>
                                 <div class="info">
                                     <div class="wrapper d-flex">
                                         <p>Catherine</p>
@@ -260,7 +279,8 @@
                                 <small class="text-muted my-auto">23 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="{{ asset('admin')}}/images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                                <div class="profile"><img src="{{ asset('admin') }}/images/faces/face3.jpg"
+                                        alt="image"><span class="online"></span></div>
                                 <div class="info">
                                     <p>Daniel Russell</p>
                                     <p>Available</p>
@@ -268,7 +288,8 @@
                                 <small class="text-muted my-auto">14 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="{{ asset('admin')}}/images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                                <div class="profile"><img src="{{ asset('admin') }}/images/faces/face4.jpg"
+                                        alt="image"><span class="offline"></span></div>
                                 <div class="info">
                                     <p>James Richardson</p>
                                     <p>Away</p>
@@ -276,7 +297,8 @@
                                 <small class="text-muted my-auto">2 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="{{ asset('admin')}}/images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                                <div class="profile"><img src="{{ asset('admin') }}/images/faces/face5.jpg"
+                                        alt="image"><span class="online"></span></div>
                                 <div class="info">
                                     <p>Madeline Kennedy</p>
                                     <p>Available</p>
@@ -284,7 +306,8 @@
                                 <small class="text-muted my-auto">5 min</small>
                             </li>
                             <li class="list">
-                                <div class="profile"><img src="{{ asset('admin')}}/images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                                <div class="profile"><img src="{{ asset('admin') }}/images/faces/face6.jpg"
+                                        alt="image"><span class="online"></span></div>
                                 <div class="info">
                                     <p>Sarah Graves</p>
                                     <p>Available</p>
@@ -301,101 +324,115 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ asset('admin')}}/index.html">
+                        <a class="nav-link" href="{{ url('admin/dashboard') }}">
                             <i class="icon-grid menu-icon"></i>
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin')}}/#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" data-toggle="collapse" href="#settings"
+                            aria-expanded="false" aria-controls="ui-basic">
                             <i class="icon-layout menu-icon"></i>
-                            <span class="menu-title">UI Elements</span>
+                            <span class="menu-title">Settings</span>
                             <i class="menu-arrow"></i>
                         </a>
-                        <div class="collapse" id="ui-basic">
+                        <div class="collapse" id="settings">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/ui-features/buttons.html">Buttons</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/ui-features/typography.html">Typography</a></li>
+                                <li class="nav-item"><a class="nav-link" href={{url('admin/settings/password_update')}}>Password Update</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin')}}/#form-elements" aria-expanded="false" aria-controls="form-elements">
+                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin') }}/#form-elements"
+                            aria-expanded="false" aria-controls="form-elements">
                             <i class="icon-columns menu-icon"></i>
                             <span class="menu-title">Form elements</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="form-elements">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href="{{ asset('admin')}}/pages/forms/basic_elements.html">Basic Elements</a></li>
+                                <li class="nav-item"><a class="nav-link"
+                                        href="{{ asset('admin') }}/pages/forms/basic_elements.html">Basic Elements</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin')}}/#charts" aria-expanded="false" aria-controls="charts">
+                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin') }}/#charts"
+                            aria-expanded="false" aria-controls="charts">
                             <i class="icon-bar-graph menu-icon"></i>
                             <span class="menu-title">Charts</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="charts">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/charts/chartjs.html">ChartJs</a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="{{ asset('admin') }}/pages/charts/chartjs.html">ChartJs</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin')}}/#tables" aria-expanded="false" aria-controls="tables">
+                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin') }}/#tables"
+                            aria-expanded="false" aria-controls="tables">
                             <i class="icon-grid-2 menu-icon"></i>
                             <span class="menu-title">Tables</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="tables">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/tables/basic-table.html">Basic table</a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="{{ asset('admin') }}/pages/tables/basic-table.html">Basic table</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin')}}/#icons" aria-expanded="false" aria-controls="icons">
+                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin') }}/#icons"
+                            aria-expanded="false" aria-controls="icons">
                             <i class="icon-contract menu-icon"></i>
                             <span class="menu-title">Icons</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="icons">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/icons/mdi.html">Mdi icons</a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="{{ asset('admin') }}/pages/icons/mdi.html">Mdi icons</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin')}}/#auth" aria-expanded="false" aria-controls="auth">
+                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin') }}/#auth"
+                            aria-expanded="false" aria-controls="auth">
                             <i class="icon-head menu-icon"></i>
                             <span class="menu-title">User Pages</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="auth">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/samples/login.html"> Login </a></li>
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/samples/register.html"> Register </a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="{{ asset('admin') }}/pages/samples/login.html"> Login </a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="{{ asset('admin') }}/pages/samples/register.html"> Register </a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin')}}/#error" aria-expanded="false" aria-controls="error">
+                        <a class="nav-link" data-toggle="collapse" href="{{ asset('admin') }}/#error"
+                            aria-expanded="false" aria-controls="error">
                             <i class="icon-ban menu-icon"></i>
                             <span class="menu-title">Error pages</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="error">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/samples/error-404.html"> 404 </a></li>
-                                <li class="nav-item"> <a class="nav-link" href="{{ asset('admin')}}/pages/samples/error-500.html"> 500 </a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="{{ asset('admin') }}/pages/samples/error-404.html"> 404 </a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="{{ asset('admin') }}/pages/samples/error-500.html"> 500 </a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ asset('admin')}}/pages/documentation/documentation.html">
+                        <a class="nav-link" href="{{ asset('admin') }}/pages/documentation/documentation.html">
                             <i class="icon-paper menu-icon"></i>
                             <span class="menu-title">Documentation</span>
                         </a>
@@ -403,34 +440,47 @@
                 </ul>
             </nav>
             <!-- Main body start-->
-            @yield('content')
+            <div class="main-panel">
+                @yield('content')
+            </div>
             <!-- Main body end-->
-
         </div>
-        <!-- page-body-wrapper ends -->
     </div>
+    <!-- main-panel ends -->
+    <!-- page-body-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.
+                Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a>
+                from BootstrapDash. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with
+                <i class="ti-heart text-danger ml-1"></i></span>
+        </div>
+    </footer>
+    <!-- partial -->
     <!-- container-scroller -->
-
+    @yield('script')
     <!-- plugins:js -->
-    <script src="{{ asset('admin')}}/vendors/js/vendor.bundle.base.js"></script>
+    <script src="{{ asset('admin') }}/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="{{ asset('admin')}}/vendors/chart.js/Chart.min.js"></script>
-    <script src="{{ asset('admin')}}/vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="{{ asset('admin')}}/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-    <script src="{{ asset('admin')}}/js/dataTables.select.min.js"></script>
+    <script src="{{ asset('admin') }}/vendors/chart.js/Chart.min.js"></script>
+    <script src="{{ asset('admin') }}/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="{{ asset('admin') }}/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="{{ asset('admin') }}/js/dataTables.select.min.js"></script>
 
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="{{ asset('admin')}}/js/off-canvas.js"></script>
-    <script src="{{ asset('admin')}}/js/hoverable-collapse.js"></script>
-    <script src="{{ asset('admin')}}/js/template.js"></script>
-    <script src="{{ asset('admin')}}/js/settings.js"></script>
-    <script src="{{ asset('admin')}}/js/todolist.js"></script>
+    <script src="{{ asset('admin') }}/js/off-canvas.js"></script>
+    <script src="{{ asset('admin') }}/js/hoverable-collapse.js"></script>
+    <script src="{{ asset('admin') }}/js/template.js"></script>
+    <script src="{{ asset('admin') }}/js/settings.js"></script>
+    <script src="{{ asset('admin') }}/js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
-    <script src="{{ asset('admin')}}/js/dashboard.js"></script>
-    <script src="{{ asset('admin')}}/js/Chart.roundedBarCharts.js"></script>
+    <script src="{{ asset('admin') }}/js/dashboard.js"></script>
+    <script src="{{ asset('admin') }}/js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
 </body>
 
