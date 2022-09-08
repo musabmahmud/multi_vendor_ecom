@@ -31,8 +31,9 @@ Route::controller(AdminController::class)->group(function () {
 
     Route::group(['middleware' => ['admin']], function () {
         Route::get('admin/dashboard', 'dashboard');
-        Route::match(['get','post',],'admin/settings/password_update', 'password_update');
+        Route::match(['get','post',],'admin/settings/password_update', 'passwordUpdate');
         Route::get('admin/logout', 'logout');
+        Route::post('admin/settings/check-current-password', 'checkAdminPassword');
     });
 
     

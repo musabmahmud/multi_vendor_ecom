@@ -30,20 +30,19 @@
                                     value="{{ $adminDetails['type'] }}" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Current Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="Current Password" name="current_password" id="current_password">
+                                <label for="current_password">Current Password</label>
+                                <input type="password" class="form-control" placeholder="Current Password"
+                                    name="current_password" id="current_password">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword2">New Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword2"
-                                    placeholder="New Password" name="new_password" onchange="matchPassword();" id="new_password">
+                                <label for="new_password">New Password</label>
+                                <input type="password" class="form-control" placeholder="New Password" name="new_password"
+                                    onchange="matchPassword();" id="new_password">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputConfirmPassword3">Confirm Password</label>
-                                <input type="password" class="form-control" id="exampleInputConfirmPassword3"
-                                    placeholder="Confirm Password" name="confirm_password" onchange="matchPassword();"
-                                    id="confirm_password">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input type="password" class="form-control" placeholder="Confirm Password"
+                                    name="confirm_password" onchange="matchPassword();" id="confirm_password">
                             </div>
                             <div class="text-right">
                                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
@@ -60,17 +59,40 @@
 
 @section('script')
     <script>
-        function matchPassword() {
-            var pw1 = document.getElementById("new_password").value;
-            var pw2 = document.getElementById("confirm_password").value;
-            if (pw1 == pw2) {
-                alert("Password == successfully");
-                console.log(pw1);
+        // function matchPassword() {
+        //     var pw1 = document.getElementById("new_password");
+        //     var pw2 = document.getElementById("confirm_password");
+        //     if (pw1.value != pw2.value) {
+        //         pw1.style.border = "1px solid #ff0000";
+        //         pw2.style.border = "1px solid #ff0000";
+        //     } else {
+        //         pw1.style.border = "1px solid #00ff00";
+        //         pw2.style.border = "1px solid #00ff00";
+        //     }
+        // }
 
-            } else {
-                console.log(pw2);
-                alert("Password created successfully");
-            }
-        }
+        $(document).ready(function() {
+            $("#current_password").keyup(function() {
+                var current_password = $("#current_password").val();
+                $.ajax({
+                    type: 'post',
+                    url: 'admin/settings/check-current-password',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {
+                        current_password: current_password
+                    },
+                    success: function(data) {
+                        console.log("ready!");
+                        alert(data);
+                    },
+                    error: function() {
+                        alert("Error");
+                        console.log("Error!");
+                    }
+                });
+            })
+        });
     </script>
 @endsection

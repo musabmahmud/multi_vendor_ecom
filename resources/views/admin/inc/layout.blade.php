@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Skydash Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('admin') }}/vendors/feather/feather.css">
@@ -330,15 +330,16 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#settings"
-                            aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" data-toggle="collapse" href="#settings" aria-expanded="false"
+                            aria-controls="ui-basic">
                             <i class="icon-layout menu-icon"></i>
                             <span class="menu-title">Settings</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="settings">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href={{url('admin/settings/password_update')}}>Password Update</a></li>
+                                <li class="nav-item"><a class="nav-link"
+                                        href={{ url('admin/settings/password_update') }}>Password Update</a></li>
                             </ul>
                         </div>
                     </li>

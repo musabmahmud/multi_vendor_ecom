@@ -42,9 +42,21 @@ class AdminController extends Controller
         return redirect('admin/login');
     }
 
-    public function password_update(Request $request)
+    public function passwordUpdate(Request $request)
     {
         $adminDetails = Admin::where('email', Auth::guard('admin')->user()->email)->first()->toArray();
         return view('admin.settings.update_password')->with(compact('adminDetails'));
+    }
+
+    public function checkAdminPassword(Request $request){
+        $data = $request->validate([
+            'current_password' => 'required|max:255|min:8',
+        ]);
+        if(Hash::check($data['current_password'],Auth::guard('admin')->user()->password)){
+            return "true";
+        }
+        else{
+            return "false";
+        }
     }
 }
